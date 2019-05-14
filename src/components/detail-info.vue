@@ -168,7 +168,7 @@ export default {
     },
     getOtherBooks: function () {
       let author = this.bookData.author
-      this.axios.get(`/novel/author-books?author=${author}`).then(res => {
+      this.axios.get(`https://novel.juhe.im/author-books?author=${author}`).then(res => {
         this.otherBooks = res.data.books
       })
     },
@@ -181,16 +181,16 @@ export default {
       this.isdiscuss = bool
     },
     getlimitData: function () {
-      this.axios.get(`/novel/book/discussions?book=${this.id}`).then(res => {
+      this.axios.get(`https://novel.juhe.im/book/discussions?book=${this.id}`).then(res => {
         this.limitDiscussData = res.data.posts
       })
-      this.axios.get(`/novel/book/short-reviews?&start=0&limit=30&book=${this.id}`).then(res => {
+      this.axios.get(`https://novel.juhe.im/book/short-reviews?&start=0&limit=30&book=${this.id}`).then(res => {
         this.limitCommentData = res.data.docs
         this.limitDiscussData.id = this.id
       })
     },
     getComment: function (start) {
-      this.axios.get(`/novel/book/short-reviews?&start=${start}&limit=30&book=${this.id}`).then(res => {
+      this.axios.get(`https://novel.juhe.im/book/short-reviews?&start=${start}&limit=30&book=${this.id}`).then(res => {
         this.limitCommentData = res.data.docs
       })
     },
