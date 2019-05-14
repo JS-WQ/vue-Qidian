@@ -201,7 +201,7 @@ export default {
         })
     },
     getHotweekData: function () {
-      this.axios.get('/hotweek').then(res => {
+      this.axios.get('https://novel.juhe.im/rank/54d42d92321052167dfb75e3').then(res => {
         this.HotweekData = res.data.ranking.books
         this.slidersData = res.data.ranking.books.slice(0, 5)
       })
