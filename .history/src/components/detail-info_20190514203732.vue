@@ -75,7 +75,7 @@
         <div class="updata">
           <span>最近更新</span>
           <!-- <router-link :to="{name:'readview',params:{id:chapters.link}}">{{chapters.title}}</router-link> -->
-          <span>{{bookData.lastChapter}}</span>
+          <a>{{bookData.lastChapter}}</a>
           <p>{{bookData.updated | timechange}}</p>
         </div>
         <div class="bookRecommend">
@@ -430,7 +430,7 @@ export default {
         span {
           color: #999;
         }
-        span {
+        a {
           margin: 0 40px;
           color: #3f5a93;
         }

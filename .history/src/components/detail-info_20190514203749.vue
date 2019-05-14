@@ -430,7 +430,7 @@ export default {
         span {
           color: #999;
         }
-        span {
+        a {
           margin: 0 40px;
           color: #3f5a93;
         }
