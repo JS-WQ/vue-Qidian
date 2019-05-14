@@ -1,0 +1,142 @@
+.icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+li .xuanhuan {
+  background-image: url("../images/icon/玄幻.png");
+}
+li:hover .xuanhuan {
+  background-image: url("../images/icon/玄幻-a.png");
+}
+.qihuan {
+  background-image: url("../images/icon/奇幻.png");
+}
+li:hover .qihuan {
+  background-image: url("../images/icon/奇幻-a.png");
+}
+.wuxia {
+  background-image: url("../images/icon/武侠.png");
+}
+li:hover .wuxia {
+  background-image: url("../images/icon/武侠-a.png");
+}
+.xianxia {
+  background-image: url("../images/icon/仙侠.png");
+}
+li:hover .xianxia {
+  background-image: url("../images/icon/仙侠-a.png");
+}
+.dushi {
+  background-image: url("../images/icon/都市.png");
+}
+li:hover .dushi {
+  background-image: url("../images/icon/都市-a.png");
+}
+.zhichang {
+  background-image: url("../images/icon/现实.png");
+}
+li:hover .zhichang {
+  background-image: url("../images/icon/现实-a.png");
+}
+.lishi {
+  background-image: url("../images/icon/历史.png");
+}
+li:hover .lishi {
+  background-image: url("../images/icon/历史-a.png");
+}
+.junshi {
+  background-image: url("../images/icon/军事.png");
+}
+li:hover .junshi {
+  background-image: url("../images/icon/军事-a.png");
+}
+.youxi {
+  background-image: url("../images/icon/游戏.png");
+}
+li:hover .youxi {
+  background-image: url("../images/icon/游戏-a.png");
+}
+.jingji {
+  background-image: url("../images/icon/竞技.png");
+}
+li:hover .jingji {
+  background-image: url("../images/icon/竞技-a.png");
+}
+.kehuan {
+  background-image: url("../images/icon/科幻.png");
+}
+li:hover .kehuan {
+  background-image: url("../images/icon/科幻-a.png");
+}
+.lingyi {
+  background-image: url("../images/icon/灵异.png");
+}
+li:hover .lingyi {
+  background-image: url("../images/icon/灵异-a.png");
+}
+.tongren {
+  background-image: url("../images/icon/同人.png");
+}
+li:hover .tongren {
+  background-image: url("../images/icon/同人-a.png");
+}
+.qingxiaoshuo {
+  background-image: url("../images/icon/轻小说.png");
+}
+li:hover .qingxiaoshuo {
+  background-image: url("../images/icon/轻小说-a.png");
+}
+.gudaiyanqing {
+  background-image: url("../images/icon/古代言情.png");
+}
+li:hover .gudaiyanqing {
+  background-image: url("../images/icon/古代言情-a.png");
+}
+.xiandaiyanqing {
+  background-image: url("../images/icon/现代言情.png");
+}
+li:hover .xiandaiyanqing {
+  background-image: url("../images/icon/现代言情-a.png");
+}
+.qingchunxiaoyuan {
+  background-image: url("../images/icon/浪漫青春.png");
+}
+li:hover .qingchunxiaoyuan {
+  background-image: url("../images/icon/浪漫青春-a.png");
+}
+.nvzun {
+  background-image: url("../images/icon/女尊.png");
+}
+li:hover .nvzun {
+  background-image: url("../images/icon/女尊-a.png");
+}
+.lili {
+  background-image: url("../images/icon/莉莉.png");
+}
+li:hover .lili {
+  background-image: url("../images/icon/莉莉-a.png");
+}
+.chunai {
+  background-image: url("../images/icon/纯爱.png");
+}
+li:hover .chunai {
+  background-image: url("../images/icon/纯爱-a.png");
+}
+.icon.first {
+  background-image: url('../images/icon/第一.png');
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.icon.second {
+  background-image: url('../images/icon/第二名.png');
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.icon.third {
+  background-image: url('../images/icon/第三名.png');
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
