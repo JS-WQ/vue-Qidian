@@ -4,7 +4,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/hotweek': {
-        target: 'http://www.api.zhuishushenqi.com/ranking/54d43437d47d13ff21cad58b',
+        target: 'https://www.api.zhuishushenqi.com/ranking/54d43437d47d13ff21cad58b',
         changeOrigin: true,
         secure: true,
         pathRewrite: {
@@ -12,7 +12,7 @@ module.exports = {
         }
       },
       '/novel': {
-        target: 'http://novel.juhe.im',
+        target: 'https://novel.juhe.im',
         secure: true,
         changeOrigin: true,
         pathRewrite: {
@@ -20,7 +20,7 @@ module.exports = {
         }
       },
       '/chapters': {
-        target: 'http://api.zhuishushenqi.com/atoc',
+        target: 'https://api.zhuishushenqi.com/atoc',
         secure: true,
         changeOrigin: true,
         pathRewrite: {
@@ -28,7 +28,7 @@ module.exports = {
         }
       },
       'updata': {
-        target: 'http://api05iye5.zhuishushenqi.com',
+        target: 'https://api05iye5.zhuishushenqi.com',
         secure: true,
         changeOrigin: true,
         pathRewrite: {
@@ -36,7 +36,7 @@ module.exports = {
         }
       },
       'searchSuggestion': {
-        target: 'http://api.zhuishushenqi.com/book/fuzzy-search?query=',
+        target: 'https://api.zhuishushenqi.com/book/fuzzy-search?query=',
         changeOrigin: true,
         secure: true,
         pathRewrite: {
@@ -44,7 +44,7 @@ module.exports = {
         }
       },
       '/chapterMess': {
-        target: 'http://chapterup.zhuishushenqi.com/chapter',
+        target: 'https://chapterup.zhuishushenqi.com/chapter',
         changeOrigin: true,
         secure: true,
         pathRewrite: {
@@ -52,7 +52,7 @@ module.exports = {
         }
       },
       '/zhuangxiu': {
-        target: 'http://api.zhuishushenqi.com',
+        target: 'https://api.zhuishushenqi.com',
         changeOrigin: true,
         secure: true,
         pathRewrite: {
