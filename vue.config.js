@@ -1,6 +1,6 @@
 module.exports = {
   // lintOnSave: false,
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-Qidian/dist/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-Qidian/" : "/",
   devServer: {
     proxy: {
       '/hotweek': {
