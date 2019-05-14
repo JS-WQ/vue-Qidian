@@ -114,7 +114,7 @@ export default {
   methods: {
     getsubCategories: function () {
       let gender = this.$route.params.gender
-      this.axios.get('https://novel.juhe.im/sub-categories').then(res => {
+      this.axios.get('/novel/sub-categories').then(res => {
         let data = res.data[gender]
         this.subCategories = data.filter(item => {
           return item.major === this.$route.params.id
@@ -125,7 +125,7 @@ export default {
     getWeekData: function () {
       this.axios
         .get(
-          `https://novel.juhe.im/category-info?gender=${this.$route.params.gender}&major=${
+          `/novel/category-info?gender=${this.$route.params.gender}&major=${
             this.$route.params.id
           }&start=0&limit=19`
         )
@@ -139,7 +139,7 @@ export default {
       // 新书
       this.axios
         .get(
-          `https://novel.juhe.im/category-info?gender=${
+          `/novel/category-info?gender=${
             this.$route.params.gender
           }&type=new&major=${this.$route.params.id}&start=0&limit=11`
         )
@@ -151,7 +151,7 @@ export default {
       this.subCategories[0].mins.forEach(item => {
         this.axios
           .get(
-            `https://novel.juhe.im/category-info?gender=${
+            `/novel/category-info?gender=${
               this.$route.params.gender
             }&type=hot&major=${
               this.$route.params.id
@@ -165,6 +165,7 @@ export default {
             arr.push(sliders, list)
             this.hotClassify.push(arr)
           })
+        console.log(this.hotClassify)
       })
     },
     init: function () {

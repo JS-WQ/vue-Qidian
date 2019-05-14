@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     getRankList: function () {
-      this.axios.get(`https://novel.juhe.im/rank/${this.$route.params.id}`).then(res => {
+      this.axios.get(`/novel/rank/${this.$route.params.id}`).then(res => {
         this.ranklist = res.data.ranking
         this.viewlist = res.data.ranking.books.slice(0, 10)
       })

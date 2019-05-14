@@ -199,6 +199,7 @@ export default {
       this.getRecommendData()
       this.getUpdata()
       this.getlimitData()
+      console.log('kaishil')
     }
   },
   created () {

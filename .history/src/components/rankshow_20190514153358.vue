@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     getNavlist: function () {
-      this.axios.get('https://novel.juhe.im/rank-category').then(res => {
+      this.axios.get('/novel/rank-category').then(res => {
         this.navList = res.data
       })
     },

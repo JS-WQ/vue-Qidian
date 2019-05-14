@@ -22,14 +22,14 @@ export default {
   },
   methods: {
     getChapter: function () {
-      this.axios.get(`https://api.zhuishushenqi.com/atoc/${this.bookid}?view=chapters`).then(res => {
+      this.axios.get(`chapters/${this.bookid}?view=chapters`).then(res => {
         this.chapterData = res.data.chapters
         this.showData = this.chapterData.slice(0, this.index)
       })
     },
     getBookid: function () {
       // 获取正版源
-      this.axios.get(`https://api.zhuishushenqi.com/btoc?view=summary&book=${this.$route.params.id}`).then(res => {
+      this.axios.get(`/zhuangxiu/btoc?view=summary&book=${this.$route.params.id}`).then(res => {
         this.bookid = res.data[0]._id
         this.getChapter()
       })

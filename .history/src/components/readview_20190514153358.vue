@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     getText: function () {
-      this.axios.get('https://chapterup.zhuishushenqi.com/chapter/' + this.$route.params.id).then(res => {
+      this.axios.get('/chapterMess/' + this.$route.params.id).then(res => {
         this.chapterMess = res.data.chapter
         console.log(res)
         this.mess =
@@ -69,19 +69,19 @@ export default {
       if (this.bookid === '') {
         this.bookid = localStorage.getItem('mybookid')
       }
-      this.axios.get(`https://novel.juhe.im/book-info/${this.bookid}`).then(res => {
+      this.axios.get(`/novel/book-info/${this.bookid}`).then(res => {
         this.bookData = res.data
       })
     },
     getChapter: function () {
-      this.axios.get(`https://api.zhuishushenqi.com/atoc/${this.bookid}?view=chapters`).then(res => {
+      this.axios.get(`chapters/${this.bookid}?view=chapters`).then(res => {
         this.chapterData = res.data.chapters
       })
     },
     getBookid: function () {
       // 获取正版源
       this.axios
-        .get(`https://api.zhuishushenqi.com/btoc?view=summary&book=${this.bookid}`)
+        .get(`/zhuangxiu/btoc?view=summary&book=${this.bookid}`)
         .then(res => {
           this.bookid = res.data[0]._id
           this.getChapter()

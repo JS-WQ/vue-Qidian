@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     getClassify: function () {
-      this.axios.get('https://novel.juhe.im/sub-categories').then(res => {
+      this.axios.get('/novel/sub-categories').then(res => {
         this.classifyData = res.data
         this.getGenderClassify(this.classifyData.male, this.maleClassify, 4)
         this.getGenderClassify(

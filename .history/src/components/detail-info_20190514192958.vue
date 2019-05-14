@@ -152,7 +152,7 @@ export default {
   methods: {
     getDetailData: function (id) {
       this.id = this.id || this.$route.params.id
-      this.axios.get(`https://novel.juhe.im/book-info/${this.id}`).then(res => {
+      this.axios.get(`/novel/book-info/${this.id}`).then(res => {
         this.bookData = res.data
         this.author = res.data.author
         this.getOtherBooks()
@@ -162,18 +162,18 @@ export default {
       this.$router.push(`/detail/${this.id}`)
     },
     getRecommendData: function () {
-      this.axios.get(`https://novel.juhe.im/recommend/${this.id}`).then(res => {
+      this.axios.get(`/novel/recommend/${this.id}`).then(res => {
         this.recommendData = res.data.books.slice(0, 6)
       })
     },
     getOtherBooks: function () {
       let author = this.bookData.author
-      this.axios.get(`https://novel.juhe.im/author-books?author=${author}`).then(res => {
+      this.axios.get(`/novel/author-books?author=${author}`).then(res => {
         this.otherBooks = res.data.books
       })
     },
     getUpdata: function () {
-      this.axios.get(`https://novel.juhe.im/book?view=updated&id=${this.id}`).then(res => {
+      this.axios.get(`/updata/book?view=updated&id=${this.id}`).then(res => {
         this.updataMessage = res.data[0]
       })
     },
@@ -181,16 +181,16 @@ export default {
       this.isdiscuss = bool
     },
     getlimitData: function () {
-      this.axios.get(`https://novel.juhe.im/book/discussions?book=${this.id}`).then(res => {
+      this.axios.get(`/novel/book/discussions?book=${this.id}`).then(res => {
         this.limitDiscussData = res.data.posts
       })
-      this.axios.get(`https://novel.juhe.im/book/short-reviews?&start=0&limit=30&book=${this.id}`).then(res => {
+      this.axios.get(`/novel/book/short-reviews?&start=0&limit=30&book=${this.id}`).then(res => {
         this.limitCommentData = res.data.docs
         this.limitDiscussData.id = this.id
       })
     },
     getComment: function (start) {
-      this.axios.get(`https://novel.juhe.im/book/short-reviews?&start=${start}&limit=30&book=${this.id}`).then(res => {
+      this.axios.get(`/novel/book/short-reviews?&start=${start}&limit=30&book=${this.id}`).then(res => {
         this.limitCommentData = res.data.docs
       })
     },
@@ -199,6 +199,7 @@ export default {
       this.getRecommendData()
       this.getUpdata()
       this.getlimitData()
+      console.log('kaishil')
     }
   },
   created () {

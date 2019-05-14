@@ -43,7 +43,7 @@ export default {
   },
   watch: {
     searchText: function () {
-      this.axios.get('https://api.zhuishushenqi.com/book/fuzzy-search?query=' + this.searchText).then(res => {
+      this.axios.get('/searchSuggestion' + this.searchText).then(res => {
         this.suggestType = true
         this.suggestions = res.data.books.slice(0, 12)
       })

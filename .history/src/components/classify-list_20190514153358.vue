@@ -59,7 +59,7 @@ export default {
       }
       this.axios
         .get(
-          `https://novel.juhe.im/category-info?gender=${this.$route.params.gender}&type=${
+          `/novel/category-info?gender=${this.$route.params.gender}&type=${
             this.$route.params.status || 'hot'
           }&major=${this.$route.params.major}&minor=${this.$route.params
             .minor || ''}&start=${this.start}&limit=${this.limit}`
@@ -72,6 +72,7 @@ export default {
     handleCurrentChange: function (e) {
       this.pageIndex = e
       this.getBookData(e)
+      // this.bookData = this.bookData.books.slice((e - 1) * 10, e * 10);
     }
   },
   created () {
@@ -90,6 +91,8 @@ export default {
     }
   },
   beforeRouteEnter (to, from, next) {
+    console.log('finish', from)
+    console.log('finish', to)
     next()
   }
 }

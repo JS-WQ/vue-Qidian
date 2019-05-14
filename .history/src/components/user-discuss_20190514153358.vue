@@ -54,7 +54,7 @@ export default {
       let start = 30 * e
       console.log(this.$route.params.id)
       this.axios
-        .get(`https://novel.juhe.im/book/discussions?&start=${start}&limit=20&book=${this.$route.params.id}`)
+        .get(`/novel/book/discussions?&start=${start}&limit=20&book=${this.$route.params.id}`)
         .then(res => {
           console.log(res)
           if (res.data.posts.length === 0) {

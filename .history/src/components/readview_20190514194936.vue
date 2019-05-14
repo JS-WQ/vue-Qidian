@@ -81,7 +81,7 @@ export default {
     getBookid: function () {
       // 获取正版源
       this.axios
-        .get(`https://api.zhuishushenqi.com/btoc?view=summary&book=${this.bookid}`)
+        .get(`/zhuangxiu/btoc?view=summary&book=${this.bookid}`)
         .then(res => {
           this.bookid = res.data[0]._id
           this.getChapter()
